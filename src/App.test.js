@@ -13,8 +13,13 @@ it('renders without crashing', () => {
   shallow(<App />);
 });
 
+it('contains welcome message', () => {
+  const wrapper = shallow(<App />)
+  expect(wrapper.text()).toContain( 'Welcome to React');
+});
 
 it('renders welcome message', () => {
-  const wrapper = shallow(<App />);
-  expect(wrapper.text()).toContain( 'Welcome to React');
+  const wrapper = shallow(<App />)
+  let welcome= <h1 className="App-title">YA! Welcome to React</h1>
+  expect(wrapper).toContainReact(welcome)
 });
