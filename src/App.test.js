@@ -12,3 +12,9 @@ it('renders without crashing', () => {
 it('renders without crashing', () => {
   shallow(<App />);
 });
+
+
+it('renders welcome message', () => {
+  const wrapper = shallow(<App />);
+  expect(wrapper.text()).toContain( 'Welcome to React');
+});
