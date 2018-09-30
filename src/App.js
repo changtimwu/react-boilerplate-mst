@@ -4,6 +4,17 @@ import logo from './logo.svg'
 import MuiDemo from './MuiDemo'
 import './App.css'
 
+
+
+const Home = () => (
+  <div>
+    <h2>Home</h2>
+    <p className="App-intro">
+      To get started, edit <code>src/App.js</code> and save to reload.
+    </p>
+  </div>
+)
+
 class App extends Component {
   render() {
     return (
@@ -15,15 +26,15 @@ class App extends Component {
         <Router>
           <div>
             <ul className="menulist">
+              <NavLink to="/">Home</NavLink>
               <NavLink to="/muidemo">MaterialUI Demo</NavLink>
             </ul>
             <hr />
+            <Route exact path="/" component={Home} />
             <Route path="/muidemo" component={MuiDemo} />
           </div>
         </Router>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+     
       </div>
 
 
