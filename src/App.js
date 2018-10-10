@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Link, NavLink } from 'react-router-dom'
 import logo from './logo.svg'
 import MuiDemo from './MuiDemo'
+import MuiSignIn from './MuiSignIn'
 import './App.css'
 
 
@@ -27,14 +28,16 @@ class App extends Component {
           <div>
             <ul className="menulist">
               <NavLink to="/">Home</NavLink>
-              <NavLink to="/muidemo">MaterialUI Demo</NavLink>
+              <NavLink to="/muidemo">MaterialUI Widgets</NavLink>
+              <NavLink to="/muisignin">Sign In</NavLink>
             </ul>
             <hr />
             <Route exact path="/" component={Home} />
             <Route path="/muidemo" component={MuiDemo} />
+            <Route path="/muisignin" component={MuiSignIn} />
           </div>
         </Router>
-     
+
       </div>
 
 
