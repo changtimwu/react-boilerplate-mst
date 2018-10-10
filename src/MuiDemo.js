@@ -5,8 +5,8 @@ const MuiDemo = () => (
     <div>
         <h2>Material UI Demo</h2>
         <Button variant="raised" color="primary">
-            Hello World
-      </Button>
+          Hello World
+        </Button>
     </div>
 )
 export default MuiDemo
